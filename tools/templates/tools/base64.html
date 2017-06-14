@@ -1,0 +1,55 @@
+{% extends 'tools/base.html' %}
+{% block tool-page %}
+{#    <script src="https://cdn.bootcss.com/Base64/1.0.1/base64.js"></script>#}
+    {% load static %}
+    <script src="{% static 'tools/js/base64.min.js' %}"></script>
+    <p class="self-index-text text-center h2">在线 Base64 加密解密</p>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-2">
+                <hr>
+                <div class="self-base64-area center-block">
+                    <textarea name="" id="base64text" rows="10" class="self-base64-text" placeholder="在此输入需要加密或解密的内容, 点击相应按钮即可"></textarea>
+                    <div class="self-base64-btngroup">
+                        <button class="btn btn-primary self-base64-btn" id="encode">base64加密</button>
+                        <button class="btn btn-default" id="decode">base64解密</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#encode').click(function () {
+                var text = $('#base64text').val();
+{#                console.log(text);#}
+                var output = null;
+                if (text === ''){
+                    return null
+                } else {
+                    output = Base64.encode(text);
+{#                    console.log(output);#}
+                    $('#base64text').val(output)
+                }
+            });
+            $('#decode').click(function () {
+                var text = $('#base64text').val();
+                var output = null;
+                if (text === ''){
+                    return null
+                } else {
+                    output = Base64.decode(text);
+                    $('#base64text').val(output)
+                }
+                
+            })
+        })
+    </script>
+
+
+{% endblock %}

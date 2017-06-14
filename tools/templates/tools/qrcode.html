@@ -1,0 +1,48 @@
+{% extends 'tools/base.html' %}
+{% block tool-page %}
+{#    二维码生成#}
+    <p class="self-index-text text-center h2">在线二维码生成</p>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8">
+                <hr>
+                <div class="self-qrcode-area">
+                    <div class="self-qrcode-config">
+                        <textarea name="" id="qrtext" rows="10" class="center-block self-qrcode-textarea" placeholder="输入需要生成二维码的文本"></textarea>
+                        <input type="text" placeholder="插入图片logo地址" id="qraddr" class="self-index-input">
+                        <button class="btn btn-primary center-block self-qrcode-btn pull-right" id="qrbtn">
+                            生成二维码
+                        </button>
+                    </div>
+                    <div class="self-qrcode-display">
+
+                        <img src="http://qr.topscan.com/api.php?text=Crossin的编程教室" id="qrimg" class="center-block"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#qrbtn').click(function () {
+                var text = $('#qrtext').val();
+                var rawurl = 'http://qr.topscan.com/api.php?text=';
+                var picaddr = $('#qraddr').val();
+                var url = null;
+                if (picaddr === ''){
+                    url = rawurl+text
+                } else {
+                    url = rawurl+text+ '&logo=' + picaddr
+                }
+                $('#qrimg').attr('src', url);
+            });
+        })
+
+    </script>
+
+{% endblock %}

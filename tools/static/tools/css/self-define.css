@@ -1,0 +1,172 @@
+/*
+author : zhouxin
+date : 2017.6.13
+program : online tools
+ */
+
+/*base.html*/
+.self-body{
+    background-color: #f8f8f8;
+}
+
+.self-navi{
+    background-color: #fff;
+    height: 80px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.self-tags{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+}
+
+/*index.html*/
+
+.self-index-text{
+    color: black;
+    margin: 150px auto 20px;
+    /*font-weight: bold;*/
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+
+}
+.self-index-tools{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.self-index-tools-item{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    /*border: 1px solid black;*/
+    height: 90px;
+    width: 300px;
+    margin-bottom: 20px ;
+    background-color: #fff;
+    color: black;
+    transition: margin-top 300ms;
+}
+.self-index-tools-item:hover{
+    text-decoration: none;
+    color: green;
+    margin-top: -5px;
+    box-shadow: 5px 5px 10px #999999;
+
+}
+.self-index-tools-item-text{
+    display: block;
+    /*padding: 0 px;*/
+}
+.self-index-tools-item-img{
+    padding:0 15px;
+}
+
+.self-index-tools-item-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.self-index-tools-item-ins{
+    padding-top: 10px;
+    font-size: 13px;
+    color: #999999;
+
+}
+
+/*qrcode.html*/
+.self-qrcode-area{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 20px 10px;
+
+
+}
+.self-qrcode-config{
+    width: 55%;
+    /*border: 1px solid black;*/
+    background-color: #fff;
+    height: 400px;
+    display: block;
+    padding: 50px 30px;
+}
+
+.self-qrcode-display{
+    width: 38%;
+    /*border: 1px solid black;*/
+    background-color: #fff;
+    height: 400px;
+    overflow:hidden;
+    padding-top: 20px;
+}
+.self-qrcode-textarea{
+    width: 100%;
+    resize: none;
+}
+
+.self-qrcode-btn{
+    margin-top: 40px;
+}
+.self-index-input{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*base64.html*/
+
+.self-base64-area{
+    width: 50%;
+    height: 350px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px 20px;
+}
+.self-base64-text{
+    width: 100%;
+    resize: none;
+}
+.self-base64-btngroup{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row;
+}
+.self-base64-btn{
+    margin-right: 20px;
+}
+
+/*convertion.html*/
+.self-conv-area{
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+}
+.self-conv-area-left{
+    width: 48%;
+    background-color: #fff;
+    padding: 20px 20px;
+}
+
+.self-conv-area-right{
+    width: 48%;
+    background-color: #fff;
+    padding: 20px 20px;
+}
+.self-conv-input{
+    margin: 20px auto;
+    width: 100%;
+
+}
+.self-conv-form{
+    padding: 20px 0;
+}
+.self-conv-trinput{
+    width: 100%;
+    border: none;
+}

@@ -1,0 +1,58 @@
+{% extends 'tools/base.html' %}
+{% block index %}
+    <p class="self-index-text text-center h2">编程小工具</p>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8">
+                <hr>
+                <div class="self-index-tools">
+{#                    {% for item in content %}#}
+                        <a class="self-index-tools-item" href="qrcode/">
+                            <span class="self-index-tools-item-img">
+                                <img src="http://9.cn/static/pc/images/icon-logo-qd.png" alt="">
+                            </span>
+                            <div class="self-index-tools-item-text">
+                                <div class="self-index-tools-item-title">二维码生成</div>
+                                <div class="self-index-tools-item-ins">一个简单的生成二维码的小工具</div>
+                            </div>
+                        </a>
+
+                    <a class="self-index-tools-item" href="#">
+                            <span class="self-index-tools-item-img">
+                                <img src="http://9.cn/static/pc/images/icon-logo-qd.png" alt="">
+                            </span>
+                            <div class="self-index-tools-item-text">
+                                <div class="self-index-tools-item-title">title</div>
+                                <div class="self-index-tools-item-ins">instruction</div>
+                            </div>
+                        </a>
+                    <a class="self-index-tools-item" href="#">
+                            <span class="self-index-tools-item-img">
+                                <img src="http://9.cn/static/pc/images/icon-logo-qd.png" alt="">
+                            </span>
+                            <div class="self-index-tools-item-text">
+                                <div class="self-index-tools-item-title">title</div>
+                                <div class="self-index-tools-item-ins">instruction</div>
+                            </div>
+                        </a>
+                    <a class="self-index-tools-item" href="#">
+                            <span class="self-index-tools-item-img">
+                                <img src="http://9.cn/static/pc/images/icon-logo-qd.png" alt="">
+                            </span>
+                            <div class="self-index-tools-item-text">
+                                <div class="self-index-tools-item-title">title</div>
+                                <div class="self-index-tools-item-ins">instruction</div>
+                            </div>
+                        </a>
+{#                    #}
+{#                    {% endfor %}#}
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+    </div>
+
+{% endblock %}
+
